@@ -21,26 +21,35 @@ A ROS 2 turtlesim project demonstrating custom messages, custom services, turtle
 
 ## Project Structure
 
+```text
 myturtlesim_ws/
 └── src/
     ├── my_turtlesim_interfaces/
     │   ├── msg/
     │   │   ├── Turtle.msg
     │   │   └── TurtleArray.msg
-    │   └── srv/
-    │       └── CatchTurtle.srv
+    │   ├── srv/
+    │   │   └── CatchTurtle.srv
+    │   ├── CMakeLists.txt
+    │   └── package.xml
     │
     ├── my_turtlesim_pkg/
-    │   └── my_turtlesim_pkg/
-    │       ├── turtle_controller.py
-    │       └── turtle_spawner.py
+    │   ├── my_turtlesim_pkg/
+    │   │   ├── __init__.py
+    │   │   ├── turtle_controller.py
+    │   │   └── turtle_spawner.py
+    │   ├── setup.py
+    │   ├── setup.cfg
+    │   └── package.xml
     │
     └── my_turtlesim_bringup/
         ├── launch/
         │   └── turtlesim_catch_them_all.launch.xml
-        └── config/
-            └── catch_them_all_config.yaml
-
+        ├── config/
+        │   └── catch_them_all_config.yaml
+        ├── CMakeLists.txt
+        └── package.xml
+```
 ## Installation
 
 Clone the repository:
