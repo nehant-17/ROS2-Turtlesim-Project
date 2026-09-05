@@ -57,4 +57,36 @@ Clone the repository:
 ```bash
 git clone https://github.com/nehant-17/ROS2-Turtlesim-Project.git
 cd ROS2-Turtlesim-Project
+```
 
+Source ROS 2 Jazzy:
+
+```bash
+source /opt/ros/jazzy/setup.bash
+```
+
+Install dependencies:
+
+```bash
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+Build the workspace:
+
+```bash
+colcon build
+```
+
+Source the workspace:
+
+```bash
+source install/setup.bash
+```
+
+## Run the Project
+
+Launch the complete turtlesim system:
+
+```bash
+ros2 launch my_turtlesim_bringup turtlesim_catch_them_all.launch.xml
+```
